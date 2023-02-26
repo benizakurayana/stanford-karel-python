@@ -16,13 +16,13 @@ def main():
     Post-condition: One beeper is on the midpoint of 1st Street.
     """
     """
-    Geometrically, the midpoint of a side of a square is perpendicular to the intersection of the square's diagonals.
-    This is our core idea of this algorithm.
-    However, there are two types of boards in this problem:
+    There are two types of boards in this problem:
     - Type 1: A board with even number of corners.
     - Type 2: A board with odd number of corners.
+    Geometrically, the midpoint of a side of a square is perpendicular to the intersection of the square's diagonals.
+    This is our core idea of this algorithm.
     In Type 1, there won't be a intersection when we draw diagonals with beepers. 
-    However, there will be four adjacent beepers on the geometrical intersection. We can use this to mark the midpoint.
+    However, there will be four adjacent beepers in the center. We can use this to mark the midpoint.
     As for Type 2, there will be two beepers on the intersection, when we draw diagonals with beepers. 
     """
     if not front_is_clear():  # When square is 1x1.
@@ -194,7 +194,7 @@ def mark_midpoint():
 
         else:
             move()
-        if not front_is_clear():
+        if not front_is_clear() and not on_beeper():
             """
             When Karel makes one move, we have to check if he meets the bottom or top side 
             of the square and let him go to the next avenue.

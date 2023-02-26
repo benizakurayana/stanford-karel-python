@@ -127,7 +127,7 @@ def mark_midpoint():
 
         else:
             move()
-        if not front_is_clear():
+        if not front_is_clear() and not on_beeper():
             """
             When Karel makes one move, we have to check if he meets the bottom or top side 
             of the square and let him go to the next avenue.
