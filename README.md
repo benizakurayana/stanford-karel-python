@@ -1,4 +1,4 @@
-# stanford-karel-python
+# Stanford Karel Robot Problems Solved in Python
 My solutions to the Stanford Karel robot problems.
 
 # List of problems (from simple to complex)
